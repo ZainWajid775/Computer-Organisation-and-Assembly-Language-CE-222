@@ -1,0 +1,8 @@
+# Loading values into registers
+addi s0 , zero , 2
+addi s1 , zero , 2
+addi s2 , zero , 2
+
+# Adding the values 
+add s3 , s1 , s0
+add s4 , s2 , s3

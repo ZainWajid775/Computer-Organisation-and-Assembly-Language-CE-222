@@ -1,0 +1,11 @@
+# Loading value into register
+li t0 , 4
+
+# Shift left by 1 bit
+slli t2 , t0 , 1
+
+# Shift right by 1 bit
+srli t3 , t0 , 1
+
+# Arithemetic right shift
+srai t4 , t0 , 1

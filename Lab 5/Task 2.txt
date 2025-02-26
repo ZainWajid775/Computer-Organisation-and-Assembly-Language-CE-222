@@ -1,0 +1,35 @@
+# BRANCH IF EQUAL
+# Loading value into register
+li s0 , 4                       
+li s1 , 1                       # 1 will make branch true
+
+# Logical shift on s1 by 2 bits
+slli s1 , s1 , 2
+
+# Branch to check if s0 and s1 are equal
+# Jump to target of equal
+beq s1 , s0 , target
+    sub s2 , s1 , s0
+    mul s3 , s0 , s1
+
+# Jump when equal
+target:
+    add s1 , s0 , s1
+   
+# BRANCH IF NOT EQUAL
+# Loading value into register
+li s0 , 4                       
+li s1 , 1                       # 1 will make branch true
+
+# Logical shift on s1 by 2 bits
+slli s1 , s1 , 2
+
+# Branch to check if s0 and s1 are equal
+# Jump to target of equal
+bne s1 , s0 , label
+    sub s2 , s1 , s0
+    mul s3 , s0 , s1
+
+# Jump when equal
+label:
+    add s1 , s0 , s1

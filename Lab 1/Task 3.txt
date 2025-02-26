@@ -1,0 +1,6 @@
+# Loading values into registers
+addi s0 , zero , -17
+addi s1 , zero , 3
+
+# Performing multiplication
+mul t3 , s0 , s1

@@ -1,0 +1,15 @@
+# Load values into register
+    li t0 , 9           # 1001
+    li t1 , 15          # 1111
+  
+# Logical Operations
+    and s1 , t0 , t1    # 1001 = 9
+    or s2 , t0 , t1     # 1111 = 15
+    xor s3 , t0 , t1    # 0110 = 6
+    not s4 , t0         # 111111110110 = -10
+    not s5 , t1         # 111111110000 = -16
+    
+
+    
+
+ 
