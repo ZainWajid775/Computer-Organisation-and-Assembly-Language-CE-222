@@ -1,0 +1,22 @@
+# if (apples = = oranges) // C code check i==j
+# f = g + h;
+# else
+# apples = oranges − h;
+
+# Load apples and oranges
+li s0 , 1       # apples
+li s1 , 10      # oranges
+li s3 , 2       # g
+li s4 , 3       # h
+
+# If s0 and s1 are equal, jump to if_true , otherwise jump to else
+bge s0 , s1 , if_true 
+j else
+
+# Perform operation if they are equal
+if_true:
+    add s2 , s3 , s4
+    
+else:
+    sub s0 , s4 , s1
+end:

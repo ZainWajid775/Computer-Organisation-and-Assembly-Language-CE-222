@@ -1,0 +1,28 @@
+# // determines the power
+# // of x such that 2^x = 128
+# int pow = 1;
+# int x = 0;
+# do {
+# pow = pow * 2;
+# x = x + 1;
+# } while (pow!= 128);
+
+# Set power to 1 in s0 , x to 0 in s1
+li s0 , 1
+li s1 , 0
+
+# Store constant 128 for comparison
+li t0 , 128
+
+# Loop until value is equal to 128 , then jump to the end
+loop:
+    # Multiply using left shift
+    slli s0 , s0 , 1
+    # Increment x by 1
+    addi s1 , s1 , 1
+    # Keep looping until value is reached
+    bne s0 , t0 , loop
+    # Otherwise exit loop
+    j done
+done:
+

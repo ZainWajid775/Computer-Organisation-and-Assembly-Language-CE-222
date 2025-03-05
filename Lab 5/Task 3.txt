@@ -1,0 +1,14 @@
+# Loading values into registers
+li s0 , 2
+li s1 , 3
+
+# Jump to target label 
+j skip
+
+# These instructions will be skipped
+addi s0 , s0 , 10
+addi s1 , s1 , 10
+
+# Unconditional jump to this label
+skip:
+add s1 , s0 , s1

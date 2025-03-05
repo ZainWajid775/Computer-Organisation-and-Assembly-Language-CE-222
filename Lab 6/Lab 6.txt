@@ -1,0 +1,92 @@
+Hardware Descriptive Language -> Design digital Circuits using codes
+- implement complex digital circuits
+
+Purpose
+1.) Circuit synthesis -> Transform code to logic gates
+2.) Circuit simulation -> Provide inputs and verify output
+
+Types
+1.) Verilog -> Logic verification 
+2.) System Verily
+3.) VHDL
+
+Levels
+1.) Switch Level Modeling -> Switches / Transistors
+2.) Gate Level Modeling -> Basic Logic Gates
+3.) Data Flow Modeling -> Boolean Expression
+4.) Behavioral Modeling -> Design of Algorithms
+
+Data Types
+1.) Wire/Net -> Intermediate Connection
+2.) Reg -> Stores values 
+3.) Vector ->  input[3,0] a,b,c
+
+Ports
+1.) Input
+2.) Output
+3.) In Out
+
+1.) Binary
+2.) Hexadecimal
+3.) Octal
+
+Signed Number
+<Size> <Base format> <Number>
+
+Unsigned Number
+<Base Format> <Number>
+
+4b1111 -> 4 bit binary number
+
+Verilog Data Types
+1.) 0 -> Off state
+2.) 1 -> On state
+3.) X -> Unknown State
+4.) Z -> High impedance (high resistance , issue in circuit)
+
+Example	
+(Name cannot have numbers and need underscore)
+module and_gate (a,b,c);
+	input a,b;
+	output c;
+	and(c,a,b);
+	endmodule
+
+Test bench:
+- inputs will be reg type
+- ouput will be wire
+- .a(a1) by name instantiation 
+- UUT -> Unit Under Test
+- DUT -> Design Under Test
+
+Module and_gate_TB();
+	reg a1,b1;
+	wire c1;
+and_gate UUT(.a(a1) , .b(b1) , .c(c1));
+
+Initial begin
+A = 0 ; b = 0 ; # 10 ns
+a = 0 ; b = 1 ; # 10 ns
+a = 1 ; b = 0 ; # 10 ns
+a = 1 ; b = 1 ; # 10 ns
+$ finish;
+End
+	
+
+Module and_gate (a,b,c,f);
+	input a,b,c;
+	output e;
+	wire d;
+	and a1(d,a,b);
+	and a2(f,c,d);
+	endmodule
+
+
+
+
+
+
+
+
+
+

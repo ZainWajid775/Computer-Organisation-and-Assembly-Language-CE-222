@@ -1,0 +1,5 @@
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+At time 0 : a1 = a , b1 = 0 , sum1 =  um , carry1 = At time 10000 : a1 = a , b1 = 0 , sum1 = um , carry1 = arry0
+At time 20000 : a1 = a , b1 = 1 , sum1 =  um , carry1 = arry0
+At time 30000 : a1 = a , b1 = 1 , sum1 = um , carry1 = $finish called at time : 40 ns : File "C:/Users/PC-07/Desktop/2023775/half_adder/half_adder.srcs/sim_1/new/half_adder_tb.v" Line 38
