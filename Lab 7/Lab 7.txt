@@ -1,0 +1,57 @@
+Behavioral Modeling
+	Initial Block -> can only be executed once 
+	Always -> can be executed multiple times (Loop)
+
+- Hardware made inside always block
+
+Blocking Assignment -> =
+- Runs sequentially
+- Combinational Circuits
+
+Non-Blocking Assignment -> <=
+- Runs parallel
+- Sequential Circuits
+
+Always -> @
+Combinational
+- always@(a or b)
+- always@(a,b) 
+- always@(*) -> access input values itself
+
+Sequential
+- always@(posedge CLK , posedge RESET)
+
+- Output in always is reg
+2x1 MUX
+module mux2x1(a,b,s,y)
+	input a,b,s;		
+	output reg y;
+	
+	always@(*);
+
+	begin
+	if(s == 1b0)		case(s)
+		y = a;			1b0:y = a;
+	else				1b1:y = b;
+		y = b;
+	end
+endmodule
+
+
+Testbench
+a = 10;
+b = 01;
+op = 00; # 10
+a = 10;
+b = 01;
+op = 01; # 10
+
+
+
+
+
+
+
+
+
+
