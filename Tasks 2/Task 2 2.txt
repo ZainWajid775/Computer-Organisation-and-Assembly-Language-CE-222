@@ -1,0 +1,31 @@
+# Initialise data
+.data
+    num_1 : .word 1
+    num_2 : .word 2
+    num_3 : .word 3
+    num_4 : .word 4
+
+.text
+
+# Load values into register
+	lw t0 , num_1
+	lw t1 , num_2	
+	lw t2 , num_3
+	lw t3 , num_4
+
+# Addition
+	add s2 , t0 , t1
+	add s3 , t2 , t3
+
+# Subtraction
+	sub s4 , t1 , t0
+	sub s5 , t3 , t2
+
+# Multiplication	
+	mul s6 , t1 , t2
+	mul s7 , t2 , t3
+
+# Division
+	div s8 , t1 , t0
+	div s9 , t3 , t1
+ 

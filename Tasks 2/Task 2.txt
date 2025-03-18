@@ -1,0 +1,20 @@
+# Loading values into registers
+addi s1 , zero , 10     # B
+addi s2 , zero , 5      # C
+
+addi s4 , zero , 10     # G
+addi s5 , zero , 10     # H
+addi s6 , zero , 5      # I
+addi s7 , zero , 5      # J
+
+# A = B - C
+sub s0 , s1 , s2
+
+# F = (G + H)) - (I + J)
+
+# Performing both additions first
+add s8 , s4 , s5
+add s9 , s6 , s7
+
+# Subtracting to get F
+sub s3 , s8 , s9

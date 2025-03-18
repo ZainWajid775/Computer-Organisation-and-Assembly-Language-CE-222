@@ -1,0 +1,36 @@
+# Initialise data
+.data
+    num_1 : .word 2
+    num_2 : .word 4
+    add_op : .word 0 
+    sub_op : .word 0
+    mul_op : .word 0
+    div_op : .word 0
+    
+.text
+
+# Load values into register
+    lw t0 , num_1
+    lw t1 , num_2
+  
+# Arithemetic Operations
+    add s1 , t0 , t1
+    sub s2 , t1 , t0
+    mul s3 , t0 , t1
+    div s4 , t1 , t0
+    
+# Storing result back into memory
+    sw s1 , add_op , s5
+    sw s2 , sub_op , s6
+    sw s3 , mul_op , s7
+    sw s4 , div_op , s8
+    
+# Verifying stored results
+    lw t3 , add_op
+    lw t4 , sub_op
+    lw t5 , mul_op
+    lw t6 , sub_op
+
+
+
+ 

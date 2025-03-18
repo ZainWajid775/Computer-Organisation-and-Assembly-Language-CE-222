@@ -1,0 +1,5 @@
+# Storing first 20 bits using lui
+lui s0 , 0x02023
+
+# Adding in last 12 bits using addi into same register
+addi s0 , s0 , 0x775

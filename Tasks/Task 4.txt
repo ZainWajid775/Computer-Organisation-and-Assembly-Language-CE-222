@@ -1,0 +1,7 @@
+# Loading values into registers
+addi s0 , zero , -50
+addi s1 , zero , 3
+
+# Performing division
+div t2 , s0 , s1
+rem t3 , s0 , s1
